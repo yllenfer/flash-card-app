@@ -1,23 +1,110 @@
-.piano {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
-  gap: 5px;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  height: 100vh;
+  background: linear-gradient(135deg, #f7e8e4, #e3f2fd);
+  padding-top: 40px; /* Add some padding from the top */
 }
 
-.key {
-  width: 40px;
-  height: 120px;
+.flashcard {
   background: white;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 120px;
-  cursor: pointer;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.key:hover {
-  background: lightgray;
+.card-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #music-sheet {
-  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#piano-container {
+  padding: 10px;
+  background: #fffaf0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.piano {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: blue;
+}
+
+.white-key {
+  width: calc(100% / 21); /* Adjust for the number of keys */
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.black-key {
+  width: calc(100% / 30); /* Slightly narrower than white keys */
+  height: 70%;
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  box-sizing: border-box;
+  transform: translateX(-50%); /* Center the black key */
+}
+
+.key:hover {
+  background-color: #d3d3d3; /* Highlight on hover */
+}
+
+#music-sheet {
+  display: flex;
+  justify-content: center;
+}
+
+.piano {
+  height: 150px;
+}
+
+.white-key {
+    width: calc(100% / 21);
+  }
+
+@media (max-width: 600px) {
+  .piano {
+    height: 80px; 
+  }
+  .white-key {
+    width: calc(100% / 21);
+  }
+  .black-key {
+    width: calc(100% / 30);
+    height: 60%;
+  }
+
 }
