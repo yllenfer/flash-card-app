@@ -59,7 +59,7 @@ export function renderMusicSheet(container, note) {
   renderer.resize(scoreWidth, scoreHeight); // Resize dynamically
   const context = renderer.getContext();
 
-  const stave = new VF.Stave(10, 50, scoreWidth - 20); 
+  const stave = new VF.Stave(10, 20, scoreWidth - 20); 
   stave.addClef("treble").setContext(context).draw();
 
   const staveNote = new VF.StaveNote({
