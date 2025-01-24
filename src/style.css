@@ -1,0 +1,23 @@
+.piano {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.key {
+  width: 40px;
+  height: 120px;
+  background: white;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 120px;
+  cursor: pointer;
+}
+
+.key:hover {
+  background: lightgray;
+}
+
+#music-sheet {
+  margin-top: 20px;
+}
